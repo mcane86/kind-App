@@ -1,0 +1,71 @@
+<ion-view view-title="Kind">
+  <ion-content class="tree_background">
+    <div>
+      <div class="item item-text-wrap opacity">
+        <img class="progress_heart" src="../img/Pixel_heart_icon.png" alt="pixel progress heart" style="display: none;">
+        <img class="progress_heart" src="../img/Empty_pixel_heart_icon.png" alt="empty pixel heart">
+      </div>
+      <div id="inspired_quote" class="item item-text-wrap opacity">
+        <h2>
+          "You alone are enough. You have nothing to prove to anybody." - Maya Angelou
+        </h2>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="button button-block" on-tap="">
+        <label class="item opacity">
+          <h2>Milestones</h2>
+          <h4>
+            Add, start, and finish any Milestones<br>you think you'll meet along your day.
+          </h4>
+        </label>
+      </button>
+    </div>
+    <div class="buttons">
+      <div class="button button-block" on-tap="">
+        <label class="item opacity">
+          <h2>Status</h2>
+          <h4>
+            How are you feeling?
+          </h4>
+        </label>
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="button button-block" on-tap="">
+        <label class="item opacity">
+          <h2>Unwind</h2>
+          <h4>
+            Activities & meditation
+          </h4>
+        </label>
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="button button-block" on-tap="">
+        <label class="item opacity">
+          <h2>Banter</h2>
+          <h4>
+            Check up on friends <br>& ask for help with your Milestones
+          </h4>
+        </label>
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="button button-block" on-tap="thoughts()">
+        <label class="item opacity">
+          <h2>Thoughts</h2>
+          <h4>
+            Reflections & ideas
+          </h4>
+        </label>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar align-title="center" class="bar-dark">
+    <h1 class="title">## Milestones Today</h1>
+    <div class="buttons">
+      <button class="button button-clear icon ion-stats-bars" on-tap="statistics()"></button>
+    </div>
+  </ion-footer-bar>
+</ion-view>
