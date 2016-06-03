@@ -41,6 +41,20 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller('OpeningController', function($scope, $state) {
+  $scope.splash = function() {
+    $state.go('splash');
+  }
+
+  $scope.greetings = function() {
+    $state.go('greetings')
+  }
+
+  $scope.login = function() {
+    $state.go('login')
+  }
+})
+
 .controller('SplashController', function($scope, $state) {
   $scope.init = function() {
     setTimeout(function(){
@@ -91,6 +105,5 @@ angular.module('starter.controllers', [])
   $scope.closeAbout = function() {
     $scope.aboutmodal.hide();
   };
-
 
 });

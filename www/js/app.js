@@ -25,18 +25,72 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'OpeningController'
+  })
+
+  .state('splash', {
+    url: '/splash',
+    templateUrl: 'templates/splash.html',
+    controller: 'OpeningController'
+  })
+
+  .state('greetings', {
+    url:'/greetings',
+    templateUrl: 'templates/greetings.html',
+    controller: 'OpeningController'
+  })
+
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.milestones', {
+    url: '/milestones',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/milestones.html'
+      }
+    }
+  })
+
+  .state('app.status', {
+    url: '/status',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/status.html'
+      }
+    }
+  })
+
+  .state('app.unwind', {
+    url: '/unwind',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/unwind.html'
+      }
+    }
+  })
+
+  .state('app.banter', {
+    url: '/banter',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/banter.html'
+      }
+    }
+  })
+
+  .state('app.thoughts', {
+    url: '/thoughts',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/thoughts.html'
       }
     }
   })
@@ -69,5 +123,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/home');
+  $urlRouterProvider.otherwise('/splash');
 });

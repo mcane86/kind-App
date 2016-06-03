@@ -1,0 +1,30 @@
+<ion-view view-title="Milestones">
+  <ion-header-bar class="bar-dark">
+  </ion-header-bar>
+  <ion-content class="tree_background" ng-controller="MilestoneController">
+    <div class="list">
+          <div class="item item-input-inset opacity">
+            <label class="item-input-wrapper">
+              <input type="text" placeholder="enter Milestone" ng-model="milestoneModel.milestone">
+            </label>
+            <button class="button button-small button-dark" ng-click="addMilestone()">
+              Add
+            </button>
+          </div>
+        </div>
+        <ion-list class="list">
+          <ion-item class="item list_of_milestones" ng-repeat="milestone in milestones track by $index">
+            {{milestone}}
+            <ion-option-button class="button-balanced" ng-click="">
+              Start
+            </ion-option-button>
+            <ion-option-button class="button-assertive" ng-click="deleteMilestoneItem($index)">
+              Finish
+            </ion-option-button>
+          </ion-item>
+        </ion-list>
+  </ion-content>
+  <ion-footer-bar align-title="center" class="bar-dark">
+    <h1 class="title">## Milestones Today</h1>
+  </ion-footer-bar>
+</ion-view>
