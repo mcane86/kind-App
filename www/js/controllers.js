@@ -41,6 +41,56 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
+.controller('SplashController', function($scope, $state) {
+  $scope.init = function() {
+    setTimeout(function(){
+      $state.go('greetings');
+    }, 2000);
+  }
+})
+
+.controller('MilestoneController', function($scope) {
+  $scope.milestones = [];
+  $scope.milestoneModel = {};
+  $scope.milestoneModel.milestone = '';
+  $scope.addMilestone = function() {
+    $scope.milestones.push($scope.milestoneModel.milestone);
+    $scope.milestoneModel = {
+      milestone: ''
+    };
+  };
+  $scope.deleteMilestoneItem = function(index) {
+    $scope.milestones.splice(index, 1);
+  };
+})
+
+.controller('PlaylistsCtrl', function($scope, $ionicModal) {
+
+  $ionicModal.fromTemplateUrl('templates/preferences.html', {
+    scope:$scope
+  }).then(function(modal) {
+    $scope.prefmodal = modal;
+  });
+
+  $scope.openModal = function() {
+    $scope.prefmodal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.prefmodal.hide();
+  };
+
+  $ionicModal.fromTemplateUrl('templates/about.html', {
+    scope:$scope
+  }).then(function(modal) {
+    $scope.aboutmodal = modal;
+  });
+
+  $scope.openAbout = function() {
+    $scope.aboutmodal.show();
+  };
+  $scope.closeAbout = function() {
+    $scope.aboutmodal.hide();
+  };
+
 
 });

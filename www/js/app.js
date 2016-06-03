@@ -49,6 +49,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+
     .state('app.home', {
       url: '/home',
       views: {

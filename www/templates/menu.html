@@ -16,16 +16,19 @@
     <ion-header-bar class="bar-dark">
       <h1 class="title">Menu</h1>
     </ion-header-bar>
-    <ion-content>
+    <ion-content ng-controller="PlaylistsCtrl">
       <ion-list>
-        <ion-item menu-close href="#/app/preferences">
+        <ion-item menu-close href="#/app/home">
+          Home
+        </ion-item>
+        <ion-item menu-close on-tap="openModal()">
           Preferences
+        </ion-item>
+        <ion-item menu-close on-tap="openAbout()">
+          About
         </ion-item>
         <ion-item menu-close href="">
           Logout
-        </ion-item>
-        <ion-item menu-close href="">
-          About
         </ion-item>
       </ion-list>
     </ion-content>
