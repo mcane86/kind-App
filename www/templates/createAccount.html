@@ -1,7 +1,15 @@
-<ion-view title="Login">
+<ion-view title="Create Account">
   <ion-content>
     <form ng-submit="doLogin()">
       <div class="list">
+        <label class="item item-input">
+          <span class="input-label">First & Last Name</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Email Address</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
         <label class="item item-input">
           <span class="input-label">Username</span>
           <input type="text" ng-model="loginData.username">
@@ -10,9 +18,9 @@
           <span class="input-label">Password</span>
           <input type="password" ng-model="loginData.password">
         </label>
-        <div class="padding">
+        <label class="item">
           <button class="button button-block button-positive" on-tap="home()">Log in</button>
-        </div>
+        </label>
       </div>
     </form>
   </ion-content>

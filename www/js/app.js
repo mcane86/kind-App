@@ -31,10 +31,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'OpeningController'
   })
 
+  .state('createAccount', {
+    url: '/createAccount',
+    templateUrl: 'templates/createAccount.html',
+    controller: 'OpeningController'
+  })
+
   .state('splash', {
     url: '/splash',
     templateUrl: 'templates/splash.html',
-    controller: 'OpeningController'
+    controller: 'SplashController'
   })
 
   .state('greetings', {

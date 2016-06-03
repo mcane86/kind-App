@@ -2,6 +2,11 @@ body, .tree_background {
   background: url(../img/Sun_and_Tree2.jpg);
 }
 
+h1 {
+  color: white;
+  text-align: center;
+}
+
 h2, h4 {
   color: white;
 }

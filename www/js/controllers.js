@@ -53,6 +53,14 @@ angular.module('starter.controllers', [])
   $scope.login = function() {
     $state.go('login')
   }
+
+  $scope.home = function() {
+    $state.go('app.home')
+  }
+
+  $scope.createAccount = function() {
+    $state.go('createAccount')
+  }
 })
 
 .controller('SplashController', function($scope, $state) {
@@ -104,6 +112,19 @@ angular.module('starter.controllers', [])
   };
   $scope.closeAbout = function() {
     $scope.aboutmodal.hide();
+  };
+
+  $ionicModal.fromTemplateUrl('templates/statistics.html', {
+    scope:$scope
+  }).then(function(modal) {
+    $scope.statmodal = modal;
+  });
+
+  $scope.openStat = function() {
+    $scope.statmodal.show();
+  };
+  $scope.closeStat = function() {
+    $scope.statmodal.hide();
   };
 
 });
